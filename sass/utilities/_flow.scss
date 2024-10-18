@@ -1,0 +1,14 @@
+// This is the lobotomized owl selector, read more about this on
+// https://css-tricks.com/lobotomized-owls/
+// it is equal to *:where(:not(:first-child))
+.flow > * + * {
+    margin-top: var(--flow-spacer, 1rem);
+
+    &[data-spacing="small"] {
+        --flow-spacer: .25rem;
+    }
+
+    &[data-spacing="large"] {
+        --flow-spacer: 2rem;
+    }
+}
